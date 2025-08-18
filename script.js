@@ -143,3 +143,30 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Profile image error handling
+document.addEventListener('DOMContentLoaded', () => {
+    const profilePhoto = document.querySelector('.profile-photo');
+    const profilePlaceholder = document.querySelector('.profile-placeholder');
+    
+    if (profilePhoto && profilePlaceholder) {
+        profilePhoto.addEventListener('load', () => {
+            profilePlaceholder.style.zIndex = '-1';
+        });
+        
+        profilePhoto.addEventListener('error', () => {
+            profilePhoto.style.display = 'none';
+            profilePlaceholder.style.zIndex = '1';
+        });
+        
+        // Check if image is already loaded
+        if (profilePhoto.complete) {
+            if (profilePhoto.naturalWidth > 0) {
+                profilePlaceholder.style.zIndex = '-1';
+            } else {
+                profilePhoto.style.display = 'none';
+                profilePlaceholder.style.zIndex = '1';
+            }
+        }
+    }
+});

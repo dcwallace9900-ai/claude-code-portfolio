@@ -210,6 +210,78 @@ section {
 }
 
 .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Profile Section */
+.about-profile {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.2);
+    border: 4px solid #2563eb;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+    z-index: -1;
+}
+
+.profile-intro h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 1rem;
+}
+
+.profile-intro p:last-child {
+    font-size: 1.1rem;
+    color: #4b5563;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* About Details Section */
+.about-details {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 4rem;
@@ -510,7 +582,20 @@ section {
         font-size: 1.2rem;
     }
 
-    .about-content {
+    .about-profile {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+    }
+
+    .about-details {
         grid-template-columns: 1fr;
         gap: 2rem;
     }
@@ -554,6 +639,24 @@ section {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .about-profile {
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-intro h3 {
+        font-size: 1.5rem;
+    }
+
+    .profile-title {
+        font-size: 1rem;
     }
 
     .about-stats {
