@@ -54,21 +54,24 @@ export default function Contact() {
     setIsSubmitting(true);
     
     try {
-      // Create mailto link with form data
-      const subject = formData.subject || 'Contact from Portfolio Website';
-      const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`;
-      const mailtoLink = `mailto:dcwallace9900@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      // Submit form data to Netlify
+      const formData = new FormData(e.target as HTMLFormElement);
       
-      // Open default email client
-      window.open(mailtoLink, '_self');
-      
-      // Simulate processing time
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setIsSubmitted(true);
-      setFormData({ name: '', email: '', subject: '', message: '' });
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      // You could add error state handling here
     } finally {
       setIsSubmitting(false);
     }
