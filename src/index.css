@@ -39,8 +39,15 @@
   
   .btn-filled-contrast {
     @apply inline-flex items-center justify-center px-6 py-3 border-2 border-accent-500 text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 hover:border-accent-600 transition-all duration-200 ease-in-out;
+  }
+  
+  .btn-filled-contrast:focus,
+  .btn-filled-contrast:focus-visible,
+  .btn-filled-contrast:active,
+  .btn-filled-contrast:focus-within {
     outline: none !important;
     box-shadow: none !important;
+    border-color: rgb(239 68 68) !important; /* Keep accent border on focus */
   }
   
   .card {

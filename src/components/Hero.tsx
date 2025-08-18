@@ -101,7 +101,7 @@ export default function Hero() {
                 href="https://www.canva.com/design/DAGK-OKt0Sg/qjWFsNJU7rTWYtoiX97l7Q/view?utm_content=DAGK-OKt0Sg&utm_campaign=designshare&utm_medium=link&utm_source=editor"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-filled-contrast group"
+                className="btn-primary group"
                 aria-label="Download Diana Wallace's resume (opens in new tab)"
               >
                 Resume
