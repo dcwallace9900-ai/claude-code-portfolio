@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 import { Zap, Users, TrendingUp, Target } from 'lucide-react';
 import { Skill } from '../types';
