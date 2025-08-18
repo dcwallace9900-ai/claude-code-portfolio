@@ -200,7 +200,8 @@ export default function Contact() {
               className="lg:col-span-2"
             >
               <div className="card p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-6" name="contact" method="POST" netlify>
+                  <input type="hidden" name="form-name" value="contact" />
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
