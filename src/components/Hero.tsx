@@ -39,36 +39,37 @@ export default function Hero() {
               Available for new opportunities
             </motion.div>
 
-            {/* Name */}
+            {/* Primary Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.8 }}
               className="heading-xl text-gray-900 mb-4"
             >
-              Diana{' '}
-              <span className="text-gradient">Wallace</span>
+              Results-Driven{' '}
+              <span className="text-gradient">Technical Documentation Manager</span>
             </motion.h1>
 
-            {/* Title */}
+            {/* Name */}
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
               className="heading-sm text-gray-700 mb-6"
             >
-              Technical Documentation Manager
+              Diana Wallace
             </motion.h2>
 
-            {/* Tagline */}
+            {/* Value Proposition */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-body-lg text-gray-600 mb-8 max-w-2xl"
             >
-              I specialize in architecting SaaS product strategy and implementing AI-enhanced workflows 
-              to revolutionize the documentation lifecycle.
+              I specialize in translating complex technical concepts into clear, engaging content that 
+              drives product adoption and enhances user experience through API documentation, 
+              docs-as-code workflows, and cross-functional collaboration.
             </motion.p>
 
             {/* CTA Buttons */}

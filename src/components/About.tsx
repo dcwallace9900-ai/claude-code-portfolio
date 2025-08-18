@@ -4,27 +4,27 @@ import { Skill } from '../types';
 
 const skills: Skill[] = [
   {
-    id: 'saas-strategy',
-    title: 'SaaS Product Strategy',
-    description: 'Architecting comprehensive documentation strategies that align with product roadmaps and business objectives.',
+    id: 'api-documentation',
+    title: 'API Documentation & Developer Portals',
+    description: 'Expert in creating comprehensive API documentation, RESTful API guides, and developer portal experiences that accelerate integration.',
     icon: 'target'
   },
   {
-    id: 'ai-workflows',
-    title: 'AI-Enhanced Workflows',
-    description: 'Implementing cutting-edge AI tools to streamline content creation, maintenance, and knowledge management.',
+    id: 'ai-enhanced-docs',
+    title: 'AI-Enhanced Documentation',
+    description: 'Leveraging ChatGPT, Gemini, and Claude Code to streamline content creation, maintenance, and knowledge management workflows.',
     icon: 'zap'
   },
   {
-    id: 'developer-experience',
-    title: 'Developer Experience',
-    description: 'Creating intuitive, comprehensive documentation that accelerates developer onboarding and product adoption.',
+    id: 'docs-as-code',
+    title: 'Docs-as-Code & UX Writing',
+    description: 'Implementing Git/GitHub workflows, content accessibility (ADA/WCAG), and user-centered design principles for technical content.',
     icon: 'users'
   },
   {
-    id: 'customer-success',
-    title: 'Product Adoption & Customer Success',
-    description: 'Driving measurable efficiency improvements that directly impact customer satisfaction and product success.',
+    id: 'cross-functional-collaboration',
+    title: 'Cross-Functional Collaboration',
+    description: 'Coordinating with engineering teams using Jira, Confluence, and agile methodologies to deliver data-driven content strategy.',
     icon: 'trending-up'
   }
 ];
@@ -49,7 +49,7 @@ export default function About() {
           className="text-center mb-16"
         >
           <h2 className="heading-lg text-gray-900 mb-6">
-            About <span className="text-gradient">Me</span>
+            Skills & <span className="text-gradient">Expertise</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
         </motion.div>
@@ -65,23 +65,24 @@ export default function About() {
           >
             <div className="space-y-4">
               <p className="text-body-lg text-gray-600 leading-relaxed">
-                As a Technical Documentation Manager, I architect SaaS product strategy and implement 
-                AI-enhanced workflows to revolutionize the documentation lifecycle. My focus is on 
-                elevating the developer experience while also driving measurable efficiency for customers.
+                As a Technical Documentation Manager, I specialize in SaaS content strategy and 
+                implement AI-enhanced workflows to revolutionize the documentation lifecycle. My expertise 
+                in API documentation and docs-as-code methodologies drives measurable efficiency and 
+                elevates the developer experience.
               </p>
               
               <p className="text-body-lg text-gray-600 leading-relaxed">
-                By streamlining content creation and maintenance, I ensure documentation is always 
-                current, comprehensive, and easy to navigate. My background in education and web 
-                development gives me a strategic advantage in breaking down complex topics into 
-                intuitive, engaging content.
+                Through cross-functional collaboration and UX writing principles, I ensure documentation 
+                is always current, comprehensive, and accessible. My background in education and web 
+                development provides a strategic advantage in translating complex technical concepts 
+                into intuitive, data-driven content that enhances user experience.
               </p>
               
               <p className="text-body-lg text-gray-600 leading-relaxed">
-                I thrive on collaborating with engineers and subject matter experts to deliver 
-                documentation that is not only accurate but also a powerful tool for accelerating 
-                product adoption and customer success. I am eager to connect with forward-thinking 
-                teams committed to setting new standards for technical communication.
+                I excel at implementing docs-as-code workflows and creating API documentation that 
+                accelerates product adoption. My collaborative approach with engineering teams ensures 
+                technical accuracy while maintaining focus on customer success and content accessibility 
+                standards (ADA/WCAG compliance).
               </p>
             </div>
 
