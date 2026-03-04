@@ -5,7 +5,7 @@ markdown
 # 🚀 Professional Portfolio Website
 
 ## 🌐 Live Site
-[View my portfolio](https://dcwallace9900-ai.github.io/claude-code-portfolio/)
+[View my portfolio](https://diana-wallace.com/)
 
 ## 💼 About This Project
 A modern, responsive portfolio website built through **human-AI collaboration with Claude**. This project showcases my technical skills, professional experience, and approach to building performant web applications.
@@ -104,3 +104,4 @@ Built in collaboration with Claude AI
 Powered by modern web technologies
 Designed with user experience in mind
 This portfolio represents my journey in modern web development and human-AI collaboration
+
