@@ -121,13 +121,13 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="heading-lg text-gray-900 mb-6">
-            Let's <span className="text-gradient">Connect!</span>
+          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+            Let's <span className="text-gradient">Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-body-lg text-gray-600 max-w-3xl mx-auto">
-            Have a question, comment, or project you'd like to discuss? Fill out the form below 
-            and I'll get back to you as soon as possible.
+          <p className="text-body-lg text-gray-600 max-w-3xl mx-auto font-inter">
+            Let's discuss how strategic education programs and technical enablement can accelerate
+            your product's growth.
           </p>
         </motion.div>
 
@@ -175,20 +175,24 @@ export default function Contact() {
               {/* Additional Info */}
               <div className="card p-6">
                 <h4 className="font-semibold text-gray-900 mb-3">
-                  What to Expect
+                  Availability
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Quick response within 24 hours</span>
+                    <span>Remote</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Personalized consultation approach</span>
+                    <span>Hybrid</span>
                   </li>
                   <li className="flex items-start space-x-2">
                     <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Strategic insights and recommendations</span>
+                    <span>On-site</span>
+                  </li>
+                  <li className="flex items-start space-x-2">
+                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <span>Open to relocation</span>
                   </li>
                 </ul>
               </div>

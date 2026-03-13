@@ -2,7 +2,7 @@
 
 🌐 Live Site
 
-View my portfolio
+[View my portfolio](https://diana-wallace.com/)
 
 💼 About This Project
 

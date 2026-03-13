@@ -93,8 +93,13 @@ export default function Background() {
                       Bachelor of Arts in Education
                     </h4>
                     <p className="text-lg text-gray-700 mb-1">University of North Florida</p>
-                    <div className="inline-flex items-center px-3 py-1 bg-accent-100 text-accent-700 rounded-full text-sm font-medium">
-                      Magna Cum Laude
+                    <div className="flex flex-wrap gap-2">
+                      <div className="inline-flex items-center px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-semibold">
+                        Magna Cum Laude
+                      </div>
+                      <div className="inline-flex items-center px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm font-medium">
+                        ESOL Endorsement
+                      </div>
                     </div>
                   </div>
                   <p className="text-gray-600 leading-relaxed">

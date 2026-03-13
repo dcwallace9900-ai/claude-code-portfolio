@@ -45,7 +45,7 @@ function App() {
               &copy; {new Date().getFullYear()} Diana Wallace. All rights reserved.
             </p>
             <p className="text-gray-500 text-sm mt-2">
-              Technical Documentation Manager • SaaS Strategy • AI-Enhanced Workflows
+              Customer Education &amp; Technical Enablement Leader • Fortune 500 Enterprise Experience
             </p>
           </div>
         </div>
