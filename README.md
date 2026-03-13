@@ -1,56 +1,65 @@
+🚀 Diana Wallace - Executive Portfolio
 
-Here's the corrected README.md based on your actual repository structure:
+🌐 Live Site
 
-markdown
-# 🚀 Professional Portfolio Website
+View my portfolio
 
-## 🌐 Live Site
-[View my portfolio](https://diana-wallace.com/)
+💼 About This Project
 
-## 💼 About This Project
-A modern, responsive portfolio website built through **human-AI collaboration with Claude**. This project showcases my technical skills, professional experience, and approach to building performant web applications.
+A modern, responsive executive portfolio showcasing my experience as a Director of Customer Education & Technical Enablement.
 
-## ✨ Key Features
-- ⚡ **Lightning Fast** - Built with Vite for optimal performance
-- 🎨 **Modern Design** - Tailwind CSS for utility-first styling
-- 📱 **Fully Responsive** - Mobile-first design approach
-- 🎭 **Dynamic Animations** - Custom typewriter effect and smooth transitions
-- 🔍 **SEO Optimized** - Comprehensive meta tags and structured data
-- ♿ **Accessible** - WCAG compliant with semantic HTML
-- 📄 **Multi-page** - Portfolio and background sections
+Built through human-AI collaboration using Claude Code, this repository serves as a live demonstration of my core professional pillars: Docs-as-Code, AI-First Workflows, and Accessible Design. It highlights my strategic outcomes, leadership philosophy, and approach to scaling enterprise education programs.
 
-## 🛠️ Tech Stack
-- **TypeScript** - Type-safe JavaScript
-- **Vite** - Next-generation build tool
-- **Tailwind CSS** - Utility-first CSS framework
-- **PostCSS** - CSS processing
-- **HTML5** - Semantic markup
-- **Claude AI** - Development partner
+✨ Key Features
 
-## 📂 Project Structure
-├── src/               # Source TypeScript files
-├── dist/              # Production build
-├── public/            # Static assets including favicon
-├── .claude/           # Claude Code configuration
-├── index.html         # Main portfolio page
-├── background.html    # Education & certifications page
-├── style.css          # Global styles
-├── script.js          # Main JavaScript functionality
-├── tailwind.config.js # Tailwind configuration
-├── vite.config.ts     # Vite configuration
-└── package.json       # Project dependencies
+⚡ Modern Architecture - Built with React and Vite for optimal, scalable performance.
+
+🎨 Executive UI/UX - Custom Tailwind CSS styling prioritizing readability, cognitive load reduction, and enterprise branding.
+
+🎭 Tasteful Motion - Integrated Framer Motion for subtle, professional UI animations and staggered renders.
+
+♿ Accessible by Design - Adheres to WCAG accessibility guidelines with semantic HTML and contrasting color palettes.
+
+🤖 AI-Assisted Engineering - Architected and deployed utilizing Anthropic's Claude Code CLI to accelerate the development lifecycle.
+
+🛠️ Tech Stack
+
+React & JSX - Component-based UI architecture
+
+Vite - Next-generation frontend tooling
+
+Tailwind CSS - Utility-first CSS framework
+
+Framer Motion - Production-ready animation library
+
+Claude Code (AI) - Terminal-based AI engineering agent
+
+📂 Project Structure
+
+├── src/               # React components and assets
+│   ├── components/    # Reusable UI components (Hero, Case Studies, etc.)
+│   ├── App.jsx        # Main application routing/logic
+│   ├── main.jsx       # React entry point
+│   └── index.css      # Global Tailwind directives
+├── public/            # Static assets and SVG favicons
+├── dist/              # Production build output
+├── tailwind.config.js # Tailwind theme and styling configuration
+├── vite.config.js     # Vite bundler configuration
+└── package.json       # Project dependencies and scripts
 
 
-## 🚀 Getting Started
+🚀 Getting Started
 
-### Prerequisites
-- Node.js 16+ 
-- npm or yarn
+Prerequisites
 
-### Installation
-```bash
+Node.js 16+
+
+npm or yarn
+
+Installation
+
 # Clone the repository
-git clone https://github.com/dcwallace9900-ai/claude-code-portfolio.git
+git clone [https://github.com/dcwallace9900-ai/claude-code-portfolio.git](https://github.com/dcwallace9900-ai/claude-code-portfolio.git)
 
 # Navigate to project
 cd claude-code-portfolio
@@ -58,50 +67,24 @@ cd claude-code-portfolio
 # Install dependencies
 npm install
 
-# Start development server
+# Start local development server
 npm run dev
 
-# Build for production
+# Build for production (Netlify Deployment)
 npm run build
 
-# Preview production build
-npm run preview
-🎯 Development Features
-Hot Module Replacement - Instant updates during development
-TypeScript Support - Full type checking
-Tailwind JIT - Just-in-time compilation for faster builds
-Optimized Build - Minification and tree-shaking
-🤝 Human-AI Collaboration
-This portfolio demonstrates effective AI-assisted development:
 
-Architecture decisions made collaboratively with Claude
-Component structure refined through iterative feedback
-Performance optimizations suggested by AI analysis
-Accessibility improvements through AI code review
-SEO strategy developed with Claude's assistance
-📈 Performance Metrics
-⚡ Lighthouse Score: 95+ Performance
-🎨 First Contentful Paint: < 1s
-📱 Mobile Optimized
-🔍 SEO Score: 100
-🔮 Future Enhancements
- Add blog section with markdown support
- Implement dark mode toggle
- Add project case studies
- Integrate contact form
- Add animation library for scroll effects
- Implement PWA features
-📝 License
-MIT License - feel free to use this as inspiration for your own portfolio!
+🤝 The "AI-First" Workflow
+
+This portfolio is a practical execution of my technical enablement philosophy. By acting as the strategic architect and utilizing AI agents for code generation, I demonstrate how modern education and documentation teams can leverage LLMs to drastically reduce time-to-value, eliminate bottlenecks, and scale production without sacrificing quality or accessibility.
 
 👩‍💻 Author
+
 Diana Wallace
-Full-Stack Developer | AI Collaboration Enthusiast
+Director of Customer Education & Technical Enablement
 📧 dcwallace9900@gmail.com
+🔗 LinkedIn
 
-🙏 Acknowledgments
-Built in collaboration with Claude AI
-Powered by modern web technologies
-Designed with user experience in mind
-This portfolio represents my journey in modern web development and human-AI collaboration
+📝 License
 
+MIT License - feel free to use this as inspiration for your own docs-as-code or AI-assisted projects!
