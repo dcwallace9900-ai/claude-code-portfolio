@@ -134,12 +134,12 @@ export default function Hero() {
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full opacity-20"
               />
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-700 to-primary-900 rounded-full opacity-10"></div>
+              <div className="absolute -inset-4 bg-gradient-to-r from-stone-200 to-transparent rounded-full opacity-10"></div>
               <div className="relative w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-slate-900 shadow-large overflow-hidden border-2 border-primary-800">
                 <img
                   src="/profile.png"
                   alt="Diana Wallace - Customer Education & Technical Enablement Leader"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-[radial-gradient(circle,_#ffffff_0%,_#f5f5f4_100%)]"
                   style={{ objectPosition: 'center 20%' }}
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
