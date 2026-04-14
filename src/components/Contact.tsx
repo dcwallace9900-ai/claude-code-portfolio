@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle, AlertCircle, Linkedin } from 'lucide-react';
 import { ContactFormData } from '../types';
 import { validateEmail } from '../utils';
 
@@ -156,6 +156,21 @@ export default function Contact() {
                     >
                       <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-200" />
                       Email
+                    </a>
+                  </div>
+
+                  {/* LinkedIn Button */}
+                  <div className="text-left">
+                    <a
+                      href="https://www.linkedin.com/in/dc-wallace/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Connect with Diana Wallace on LinkedIn (opens in new tab)"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 ease-in-out group"
+                    >
+                      <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                      LinkedIn
+                      <span className="sr-only">Opens in new tab</span>
                     </a>
                   </div>
 

@@ -6,13 +6,13 @@ const caseStudies = [
     id: 'apkudo',
     icon: Building2,
     company: 'Apkudo — Device Intelligence',
-    title: 'Scaling from Zero for Fortune 500 Telcos',
+    title: 'Head of Customer Education & Readiness',
     challenge:
-      'Building a customer education and documentation function from scratch to support rapidly growing enterprise engagements.',
+      'Establishing enterprise readiness infrastructure from the ground up to stabilize Tier-1 accounts and scale revenue-driving engagements across major telcos.',
     system:
-      'Governed 20+ concurrent workstreams and integrated AI into documentation workflows, reporting directly to the COO to align with executive business priorities.',
+      'Governed 20+ concurrent workstreams, integrated AI into technical enablement workflows, and enforced ISO/ISMS security standards — reporting directly to the COO to align with executive business priorities.',
     impact:
-      'Architected the Customer Readiness Frameworks that directly enabled multi-million dollar contracts with T-Mobile, AT&T, and Verizon.',
+      'Stabilized Tier-1 accounts AT&T and Verizon through targeted readiness playbooks, and architected the Customer Readiness Frameworks that secured a $20M contract pipeline with T-Mobile.',
     metric: '20+',
     metricLabel: 'Concurrent Workstreams',
     tags: ['Customer Readiness Frameworks', 'Enterprise Enablement', 'AI Documentation', 'COO-Level Reporting'],
@@ -21,11 +21,11 @@ const caseStudies = [
     id: 'kroger',
     icon: TrendingUp,
     company: '84.51° / Kroger — Retail Data Science',
-    title: 'Developer Experience (DX) & Tooling Strategy',
+    title: 'Developer Experience (DX) Lead & Senior Technical Writer',
     challenge:
       'Enhancing the external developer experience and standardizing the knowledge base ecosystem across the Kroger Ad Platform.',
     system:
-      'Led the documentation strategy for APIs, SDKs, and Developer Portals and spearheaded the cross-functional enterprise tooling evaluation process.',
+      'Led the technical enablement strategy for APIs, SDKs, and Developer Portals and spearheaded the cross-functional enterprise tooling evaluation process.',
     impact:
       'Improved developer usability by 25% and drove ADA and WCAG accessibility initiatives that raised content accessibility and usability scores by 40%.',
     metric: '+25%',
@@ -36,11 +36,11 @@ const caseStudies = [
     id: 'blackbaud',
     icon: Zap,
     company: 'Blackbaud — Nonprofit Software as a Service (SaaS)',
-    title: 'Program Managing Cloud Migration Education',
+    title: 'Cloud Migration Strategist & Technical Writer',
     challenge:
-      'Educating the customer base and external developers on a massive platform transition across the SKY API ecosystem.',
+      'Architecting enterprise readiness playbooks to guide the customer base and external developers through a large-scale platform transition across the SKY API ecosystem.',
     system:
-      'Overhauled legacy content silos by migrating the developer portal to a docs-as-code workflow. Established cross-functional contribution guidelines for engineering teams and built self-serve learning paths for the API ecosystem.',
+      'Drove revenue enablement by migrating the developer portal to a docs-as-code workflow. Established cross-functional contribution guidelines for engineering teams and built self-serve learning pathways for the API ecosystem.',
     impact:
       'Led the customer-facing education initiative that successfully reduced customer transition time by 30% and unified the user journey.',
     metric: '30%',

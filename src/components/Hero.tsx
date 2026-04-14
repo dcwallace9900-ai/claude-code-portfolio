@@ -66,8 +66,8 @@ export default function Hero() {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="font-poppins font-bold text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6"
             >
-              Architecting customer education for{' '}
-              <span className="text-primary-400">scalable growth.</span>
+              Director of Customer Education &{' '}
+              <span className="text-primary-400">Enterprise Readiness | SAFe 5</span>
             </motion.h1>
 
             {/* Sub-headline */}
@@ -77,9 +77,8 @@ export default function Hero() {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="text-gray-300 text-lg leading-relaxed mb-10 max-w-xl font-inter"
             >
-              I build the education systems and documentation frameworks that turn complex technical
-              products into intuitive customer experiences, moving organizations from reactive support
-              to proactive enablement.
+              I architect scalable learning programs and documentation systems that accelerate
+              enterprise product adoption and drive measurable revenue outcomes.
             </motion.p>
 
             {/* CTA Buttons */}
@@ -138,7 +137,7 @@ export default function Hero() {
               <div className="relative w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-slate-900 shadow-large overflow-hidden border-2 border-primary-800">
                 <img
                   src="/profile.png"
-                  alt="Diana Wallace - Customer Education & Technical Enablement Leader"
+                  alt="Diana Wallace - Director of Customer Education & Enterprise Readiness"
                   className="w-full h-full object-cover bg-[radial-gradient(circle,_#ffffff_0%,_#f5f5f4_100%)]"
                   style={{ objectPosition: 'center 20%' }}
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
