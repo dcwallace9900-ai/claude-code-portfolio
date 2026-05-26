@@ -205,10 +205,6 @@ export default function Contact() {
                     <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
                     <span>On-site</span>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
-                    <span>Open to relocation</span>
-                  </li>
                 </ul>
               </div>
             </motion.div>
