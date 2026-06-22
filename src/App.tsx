@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Background from './components/Background';
 import Projects from './components/Projects';
+import Consulting from './components/Consulting';
 import Contact from './components/Contact';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <About />
         <Background />
         <Projects />
+        <Consulting />
         <Contact />
       </main>
       

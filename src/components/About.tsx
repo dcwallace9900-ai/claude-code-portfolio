@@ -8,6 +8,8 @@ const pillars = [
     title: 'Revenue Enablement',
     description:
       'Frameworks that directly support enterprise contract closures and reduce time-to-value.',
+    iconClass: 'bg-accent-100 text-accent-600 group-hover:bg-accent-600 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-accent-600',
   },
   {
     id: 'learning-science',
@@ -15,6 +17,8 @@ const pillars = [
     title: 'Learning Science',
     description:
       'Applying adult learning theory to technical stacks to create lasting behavior change.',
+    iconClass: 'bg-primary-100 text-primary-800 group-hover:bg-primary-800 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-primary-800',
   },
   {
     id: 'ai-first-workflows',
@@ -22,6 +26,8 @@ const pillars = [
     title: 'AI-First Workflows',
     description:
       'Integrating AI (Gemini, Claude, NotebookLM) to maximize team output and accelerate delivery.',
+    iconClass: 'bg-accent-100 text-accent-600 group-hover:bg-accent-600 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-accent-600',
   },
   {
     id: 'program-governance',
@@ -29,6 +35,8 @@ const pillars = [
     title: 'Program Governance',
     description:
       'Building headcount roadmaps, performance rubrics, and documentation standards from zero.',
+    iconClass: 'bg-primary-100 text-primary-800 group-hover:bg-primary-800 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-primary-800',
   },
 ];
 
@@ -48,24 +56,24 @@ const pillarItem = {
 
 export default function About() {
   return (
-    <section id="about" className="section-padding bg-white">
-      <div className="container">
+    <section id="about" className="py-12 lg:py-16 bg-white">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10"
         >
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
-            Built for Longevity,{' '}
-            <span className="text-gradient">Designed for Scale.</span>
+          <h2 className="font-heading font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+            From Education to{' '}
+            <span className="text-gradient">Enterprise</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
           {/* Philosophy Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -74,22 +82,16 @@ export default function About() {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <p className="text-base text-gray-600 leading-relaxed font-inter">
-              Great education programs are built for longevity, not just the launch. Drawing on a
-              formal foundation in learning science and deep technical fluency, I bridge the gap
-              between complex engineering and the end-user.
+            <p className="text-xl text-gray-600 leading-relaxed font-sans">
+              I found my love of learning in a library as a child, the moment I realized the world
+              was bigger than I'd imagined. That feeling never left me, so I spent years as an
+              educator before moving into technical documentation.
             </p>
-            <p className="text-base text-gray-600 leading-relaxed font-inter">
-              A truly scalable system must be accessible by design. By driving compliance with the
-              Americans with Disabilities Act (ADA) and Web Content Accessibility Guidelines (WCAG),
-              and adhering to strict enterprise governance like Information Security Management Systems
-              (ISMS) and International Organization for Standardization (ISO) protocols, I ensure
-              technical knowledge is universally secure and intuitive.
-            </p>
-            <p className="text-base text-gray-600 leading-relaxed font-inter">
-              From autonomous vehicles (SAE Level 4) to device intelligence, I design self-sustaining
-              learning pathways that accelerate product adoption, reduce onboarding friction, and
-              directly support business growth.
+            <p className="text-xl text-gray-600 leading-relaxed font-sans">
+              Both jobs are about the same thing: meeting someone where they are, and helping them
+              get to confident, without making them feel small along the way. That's what I bring
+              to every engagement, whether it's a Fortune 500 account or a Wallace Technology
+              Consulting client.
             </p>
           </motion.div>
 
@@ -105,14 +107,14 @@ export default function About() {
               const Icon = pillar.icon;
               return (
                 <motion.div key={pillar.id} variants={pillarItem} className="group">
-                  <div className="card p-6 h-full hover:shadow-large hover:-translate-y-1 transition-all duration-300">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 text-primary-600 rounded-xl mb-4 group-hover:bg-primary-600 group-hover:text-white transition-all duration-300">
-                      <Icon className="h-6 w-6" />
+                  <div className="card p-4 h-full hover:shadow-large hover:-translate-y-1 transition-all duration-300">
+                    <div className={`inline-flex items-center justify-center w-10 h-10 rounded-xl mb-3 transition-all duration-300 ${pillar.iconClass}`}>
+                      <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="font-poppins font-semibold text-lg text-gray-900 mb-2 group-hover:text-primary-600 transition-colors duration-300">
+                    <h3 className={`font-heading font-semibold text-lg text-gray-900 mb-2 transition-colors duration-300 ${pillar.titleHoverClass}`}>
                       {pillar.title}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed font-inter">
+                    <p className="text-gray-600 text-sm leading-relaxed font-sans">
                       {pillar.description}
                     </p>
                   </div>

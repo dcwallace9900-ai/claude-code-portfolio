@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MessageSquare, Send, CheckCircle, AlertCircle, Linkedin } from 'lucide-react';
+import { Mail, MessageSquare, Send, CheckCircle, AlertCircle, Linkedin, Calendar } from 'lucide-react';
 import { ContactFormData } from '../types';
 import { validateEmail } from '../utils';
 
@@ -88,7 +88,7 @@ export default function Contact() {
             className="max-w-2xl mx-auto text-center"
           >
             <div className="card p-8">
-              <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="h-8 w-8" />
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -121,11 +121,11 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="font-poppins font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
+          <h2 className="font-heading font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-          <p className="text-body-lg text-gray-600 max-w-3xl mx-auto font-inter">
+          <p className="text-body-lg text-gray-600 max-w-3xl mx-auto font-sans">
             Let's discuss how strategic education programs and technical enablement can accelerate
             your product's growth.
           </p>
@@ -152,7 +152,7 @@ export default function Contact() {
                     <a
                       href="mailto:dcwallace9900@gmail.com"
                       aria-label="Send email to Diana Wallace"
-                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 ease-in-out group"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-accent-600 hover:bg-accent-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 transition-all duration-200 ease-in-out group w-full"
                     >
                       <Mail className="mr-2 h-5 w-5 group-hover:rotate-12 transition-transform duration-200" />
                       Email
@@ -166,11 +166,25 @@ export default function Contact() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Connect with Diana Wallace on LinkedIn (opens in new tab)"
-                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-primary-600 hover:bg-primary-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-all duration-200 ease-in-out group"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-accent-600 hover:bg-accent-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 transition-all duration-200 ease-in-out group w-full"
                     >
                       <Linkedin className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
                       LinkedIn
                       <span className="sr-only">Opens in new tab</span>
+                    </a>
+                  </div>
+
+                  {/* Book with Me — TODO: replace href="#" with real Calendly link */}
+                  <div className="text-left">
+                    <a
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Book a consultation with Diana Wallace"
+                      className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-accent-600 hover:bg-accent-700 hover:shadow-medium hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-500 transition-all duration-200 ease-in-out group w-full"
+                    >
+                      <Calendar className="mr-2 h-5 w-5 group-hover:scale-110 transition-transform duration-200" />
+                      Book with Me
                     </a>
                   </div>
 
@@ -194,15 +208,15 @@ export default function Contact() {
                 </h4>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-sage-500 mt-0.5 flex-shrink-0" />
                     <span>Remote</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-sage-500 mt-0.5 flex-shrink-0" />
                     <span>Hybrid</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-4 w-4 text-sage-500 mt-0.5 flex-shrink-0" />
                     <span>On-site</span>
                   </li>
                 </ul>
@@ -223,7 +237,7 @@ export default function Contact() {
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Name <span className="text-red-500">*</span>
+                      Name <span className="text-accent-600">*</span>
                     </label>
                     <input
                       type="text"
@@ -248,7 +262,7 @@ export default function Contact() {
                   {/* Email */}
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email <span className="text-red-500">*</span>
+                      Email <span className="text-accent-600">*</span>
                     </label>
                     <input
                       type="email"
@@ -289,7 +303,7 @@ export default function Contact() {
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Message <span className="text-red-500">*</span>
+                      Message <span className="text-accent-600">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -315,7 +329,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full btn-primary ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-medium rounded-lg transition-all duration-200 ease-in-out animate-breathe ${
                       isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
                     }`}
                   >

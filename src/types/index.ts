@@ -16,6 +16,7 @@ export interface Certification {
   title: string;
   issuer: string;
   description: string;
+  expandedDetail?: string;
   icon: string;
   date?: string;
 }
