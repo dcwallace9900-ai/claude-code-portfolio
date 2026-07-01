@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { scrollToSection } from '../utils';
 
 const metrics = [
   { value: '20+', label: 'Concurrent Enterprise Workstreams' },
-  { value: '$40M+', label: 'Enterprise Contracts Supported' },
+  { value: 'Tier-1', label: 'Enterprise Contracts Supported' },
   { value: '30%', label: 'Reduction in Migration Time' },
   { value: 'Fortune 500', label: 'T-Mobile, AT&T, Verizon' },
 ];
@@ -78,7 +79,7 @@ export default function Hero() {
             >
               <button
                 onClick={handleViewWork}
-                className="btn-primary group"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary-800 hover:bg-primary-900 text-white font-medium rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 ease-in-out group"
                 aria-label="View strategic outcomes"
               >
                 View My Work
@@ -94,17 +95,14 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
               </button>
 
-              <a
-                href="https://www.canva.com/design/DAGK-OKt0Sg/qjWFsNJU7rTWYtoiX97l7Q/view?utm_content=DAGK-OKt0Sg&utm_campaign=designshare&utm_medium=link&utm_source=editor"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/resume"
                 className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-medium hover:border-accent-500 hover:text-accent-600 transition-all duration-200 group"
-                aria-label="View Diana Wallace's resume (opens in new tab)"
+                aria-label="View Diana Wallace's resume"
               >
                 Resume
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-200" />
-                <span className="sr-only">Opens in new tab</span>
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
 

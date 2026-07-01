@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Building2, TrendingUp, Zap, ChevronDown, ExternalLink } from 'lucide-react';
+import { Building2, TrendingUp, Zap, ArrowRight } from 'lucide-react';
 
 const caseStudies = [
   {
     id: 'apkudo',
+    detailPath: 'apkudo',
     tabLabel: 'Apkudo',
     icon: Building2,
     company: 'Apkudo — Device Intelligence',
@@ -12,17 +14,17 @@ const caseStudies = [
     challenge:
       'Establishing enterprise readiness infrastructure from the ground up to stabilize Tier-1 accounts and scale revenue-driving engagements across major telcos.',
     system:
-      'Governed 20+ concurrent workstreams, integrated AI into technical enablement workflows, and enforced ISO/ISMS security standards — reporting directly to the COO to align with executive business priorities.',
+      'Governs 20+ concurrent workstreams, integrates AI into technical enablement workflows, and enforces ISO/ISMS security standards, reporting directly to the COO to align with executive business priorities.',
     impact:
-      "Stabilized Tier-1 accounts AT&T and Verizon through targeted readiness playbooks, and built the documentation infrastructure that supported T-Mobile's Demand Planning Centralized Platform initiative as it scaled from a $20M to $40M engagement.",
-    expandedDetail:
-      'The Demand Planning initiative required replacing a fragmented, multi-source data environment with a centralized platform. I built the client-facing pitch decks, current-state and future-state requirements, and process documentation that scoped the work and justified contract value, then served as subject matter expert in live pitch sessions to close the engagement.',
+      'Stabilized Tier-1 telecommunications accounts through targeted readiness playbooks, and built the documentation infrastructure that supported a major platform initiative as it scaled from a mid-market to a large-scale enterprise engagement.',
     metric: '20+',
     metricLabel: 'Concurrent Workstreams',
     tags: ['Customer Readiness Frameworks', 'Enterprise Enablement', 'AI Documentation', 'COO-Level Reporting'],
+    linkedinUrl: 'https://www.linkedin.com/in/dc-wallace/details/experience/',
   },
   {
     id: 'kroger',
+    detailPath: '84-51',
     tabLabel: '84.51° / Kroger',
     icon: TrendingUp,
     company: '84.51° / Kroger — Retail Data Science',
@@ -33,14 +35,14 @@ const caseStudies = [
       'Led the technical enablement strategy for APIs, SDKs, and Developer Portals and spearheaded the cross-functional enterprise tooling evaluation process.',
     impact:
       'Improved developer usability by 25% and drove ADA and WCAG accessibility initiatives that raised content accessibility and usability scores by 40%.',
-    expandedDetail:
-      'Led cross-functional vendor evaluation and selection for enterprise knowledge base tooling, balancing budget constraints against engineering team needs. Mentored junior writers and defined documentation standards to keep quality consistent across quarterly release cycles.',
     metric: '+25%',
     metricLabel: 'Developer Usability',
     tags: ['API & SDK Documentation', 'Developer Portals', 'ADA/WCAG Accessibility', 'Enterprise Tooling'],
+    linkedinUrl: null,
   },
   {
     id: 'blackbaud',
+    detailPath: 'blackbaud',
     tabLabel: 'Blackbaud',
     icon: Zap,
     company: 'Blackbaud — Nonprofit SaaS',
@@ -51,26 +53,20 @@ const caseStudies = [
       'Drove revenue enablement by migrating the developer portal to a docs-as-code workflow. Established cross-functional contribution guidelines for engineering teams and built self-serve learning pathways for the API ecosystem.',
     impact:
       'Led the customer-facing education initiative that successfully reduced customer transition time by 30% and unified the user journey.',
-    expandedDetail:
-      'The migration moved customers off a desktop-based system with known security vulnerabilities and onto the cloud. Built blog posts, how-to guides, and adoption content to drive customer uptake, and partnered with engineering to develop Python scripting that replaced manual, individual customer migrations with a faster, team-based process — the mechanism behind the 30% time reduction.',
     metric: '30%',
     metricLabel: 'Reduction in Migration Time',
     tags: ['Docs-as-Code', 'Cloud Migration', 'Developer Portal', 'Customer Education'],
+    linkedinUrl: null,
   },
 ];
 
-export default function Projects() {
+export default function ProjectsTeaser() {
   const [selectedId, setSelectedId] = useState(caseStudies[0].id);
-  const [expandedId, setExpandedId] = useState<string | null>(null);
 
-  const selectTab = (id: string) => {
-    setSelectedId(id);
-    setExpandedId(null);
-  };
+  const selectTab = (id: string) => setSelectedId(id);
 
   const study = caseStudies.find(s => s.id === selectedId)!;
   const Icon = study.icon;
-  const isExpanded = expandedId === study.id;
 
   return (
     <section id="projects" className="section-padding bg-gray-50">
@@ -118,7 +114,7 @@ export default function Projects() {
 
         {/* Tab preview line */}
         <p className="text-center text-sm text-gray-500 italic mb-6 font-sans">
-          {selectedId === 'apkudo' && 'A $40M telecom engagement, built from the ground up.'}
+          {selectedId === 'apkudo' && 'A Tier-1 telecom engagement, built from the ground up.'}
           {selectedId === 'kroger' && 'A 25% usability gain across a major developer platform.'}
           {selectedId === 'blackbaud' && 'A 30% faster migration, powered by custom tooling.'}
         </p>
@@ -154,40 +150,39 @@ export default function Projects() {
                     {study.title}
                   </h3>
 
-                  <a
-                    href="https://www.linkedin.com/in/dc-wallace/details/experience/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center px-4 py-2 bg-primary-800 text-white text-sm font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200 mb-6 animate-breathe"
-                  >
-                    View the Project
-                    <ExternalLink className="ml-1.5 h-4 w-4" />
-                  </a>
+                  {/* View the Project button */}
+                  {study.id === 'apkudo' ? (
+                    <Link
+                      to="/projects/apkudo#work-samples"
+                      className="inline-flex items-center px-4 py-2 bg-primary-800 text-white text-sm font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200 mb-6 animate-breathe"
+                    >
+                      View the Project
+                      <ArrowRight className="ml-1.5 h-4 w-4" />
+                    </Link>
+                  ) : (
+                    <span className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-400 text-sm font-medium rounded-lg cursor-not-allowed mb-6">
+                      Coming Soon
+                    </span>
+                  )}
 
                   <div className="grid sm:grid-cols-3 gap-6 mb-6">
                     <div>
                       <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 font-sans">
                         The Challenge
                       </p>
-                      <p className="text-gray-600 text-sm leading-relaxed font-sans">
-                        {study.challenge}
-                      </p>
+                      <p className="text-gray-600 text-sm leading-relaxed font-sans">{study.challenge}</p>
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 font-sans">
                         The System
                       </p>
-                      <p className="text-gray-600 text-sm leading-relaxed font-sans">
-                        {study.system}
-                      </p>
+                      <p className="text-gray-600 text-sm leading-relaxed font-sans">{study.system}</p>
                     </div>
                     <div>
                       <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-2 font-sans">
                         The Impact
                       </p>
-                      <p className="text-gray-700 text-sm leading-relaxed font-medium font-sans">
-                        {study.impact}
-                      </p>
+                      <p className="text-gray-700 text-sm leading-relaxed font-medium font-sans">{study.impact}</p>
                     </div>
                   </div>
 
@@ -203,44 +198,16 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Expand toggle */}
-                  <button
-                    onClick={() => setExpandedId(prev => (prev === study.id ? null : study.id))}
-                    className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-600 hover:text-accent-700 transition-colors duration-200 font-sans"
-                    aria-expanded={isExpanded}
-                  >
-                    {isExpanded ? 'Collapse' : 'Read the full story'}
-                    <motion.span
-                      animate={{ rotate: isExpanded ? 180 : 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="inline-flex"
+                  {/* Case study link — only for tabs without work samples */}
+                  {study.id !== 'apkudo' && (
+                    <Link
+                      to={`/projects/${study.detailPath}`}
+                      className="inline-flex items-center mt-1 text-accent-600 font-medium text-sm hover:text-accent-700 transition-colors duration-200 font-sans"
                     >
-                      <ChevronDown className="h-4 w-4" />
-                    </motion.span>
-                  </button>
-
-                  {/* Expanded detail */}
-                  <AnimatePresence initial={false}>
-                    {isExpanded && (
-                      <motion.div
-                        key="detail"
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="overflow-hidden"
-                      >
-                        <div className="mt-5 pt-5 border-t border-gray-100">
-                          <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 font-sans">
-                            Behind the Work
-                          </p>
-                          <p className="text-gray-600 text-sm leading-relaxed font-sans">
-                            {study.expandedDetail}
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                      Read the Full Case Study
+                      <ArrowRight className="ml-1.5 h-4 w-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

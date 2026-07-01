@@ -55,19 +55,19 @@ const whyItems = [
     icon: BookOpen,
     title: 'Educational Foundation',
     desc: 'Understanding how people learn enables me to create more effective documentation',
-    iconClass: 'bg-accent-100 text-accent-600',
+    iconClass: 'bg-primary-800 border-2 border-gold-400 text-white',
   },
   {
     icon: Code,
     title: 'Technical Expertise',
     desc: "Hands-on development experience allows me to speak the developer's language",
-    iconClass: 'bg-primary-100 text-primary-800',
+    iconClass: 'bg-primary-800 border-2 border-gold-400 text-white',
   },
   {
     icon: Brain,
     title: 'AI Integration',
     desc: 'Leveraging AI tools to revolutionize documentation workflows and efficiency',
-    iconClass: 'bg-accent-100 text-accent-600',
+    iconClass: 'bg-primary-800 border-2 border-gold-400 text-white',
   },
 ];
 
@@ -90,7 +90,7 @@ export default function Background() {
           <h2 className="heading-lg text-gray-900 mb-6">
             My <span className="text-gradient">Background</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-6"></div>
+          <div className="w-24 h-1 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-body-lg text-gray-600 max-w-3xl mx-auto">
             A strong foundation in education combined with cutting-edge technical expertise
             to deliver exceptional documentation strategies.
@@ -109,7 +109,7 @@ export default function Background() {
           <div className="card p-6">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-accent-100 text-accent-600 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12 bg-primary-800 border-2 border-gold-400 text-white rounded-xl flex items-center justify-center">
                   <GraduationCap className="h-6 w-6" />
                 </div>
               </div>

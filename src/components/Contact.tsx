@@ -124,7 +124,7 @@ export default function Contact() {
           <h2 className="font-heading font-bold text-4xl lg:text-5xl text-gray-900 mb-6">
             Let's <span className="text-gradient">Connect</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gold-500 mx-auto mb-8"></div>
           <p className="text-body-lg text-gray-600 max-w-3xl mx-auto font-sans">
             Let's discuss how strategic education programs and technical enablement can accelerate
             your product's growth.
@@ -174,10 +174,10 @@ export default function Contact() {
                     </a>
                   </div>
 
-                  {/* Book with Me — TODO: replace href="#" with real Calendly link */}
+                  {/* Book with Me */}
                   <div className="text-left">
                     <a
-                      href="#"
+                      href="https://calendly.com/dcwallace9900/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label="Book a consultation with Diana Wallace"

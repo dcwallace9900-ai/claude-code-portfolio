@@ -82,6 +82,7 @@ export default {
         'bounce-gentle': 'bounceGentle 2s infinite',
         'breathe': 'breathe 2.5s ease-in-out infinite',
         'photo-glow': 'photoGlow 2.5s ease-in-out infinite',
+        'tab-breathe': 'tabBreathe 2.5s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -115,6 +116,10 @@ export default {
         photoGlow: {
           '0%, 100%': { boxShadow: '0 0 0 4px rgba(191, 155, 94, 0.45)' },
           '50%': { boxShadow: '0 0 0 14px rgba(191, 155, 94, 0)' },
+        },
+        tabBreathe: {
+          '0%, 100%': { boxShadow: '0 4px 0 0 rgba(154, 84, 64, 0.3)' },
+          '50%': { boxShadow: '0 4px 8px 0 rgba(154, 84, 64, 0.1)' },
         },
       },
       boxShadow: {

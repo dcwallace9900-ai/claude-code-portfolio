@@ -17,8 +17,8 @@ const pillars = [
     title: 'Learning Science',
     description:
       'Applying adult learning theory to technical stacks to create lasting behavior change.',
-    iconClass: 'bg-primary-100 text-primary-800 group-hover:bg-primary-800 group-hover:text-white',
-    titleHoverClass: 'group-hover:text-primary-800',
+    iconClass: 'bg-accent-100 text-accent-600 group-hover:bg-accent-600 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-accent-600',
   },
   {
     id: 'ai-first-workflows',
@@ -35,8 +35,8 @@ const pillars = [
     title: 'Program Governance',
     description:
       'Building headcount roadmaps, performance rubrics, and documentation standards from zero.',
-    iconClass: 'bg-primary-100 text-primary-800 group-hover:bg-primary-800 group-hover:text-white',
-    titleHoverClass: 'group-hover:text-primary-800',
+    iconClass: 'bg-accent-100 text-accent-600 group-hover:bg-accent-600 group-hover:text-white',
+    titleHoverClass: 'group-hover:text-accent-600',
   },
 ];
 
@@ -70,7 +70,7 @@ export default function About() {
             From Education to{' '}
             <span className="text-gradient">Enterprise</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+          <div className="w-24 h-1 bg-gold-500 mx-auto mb-8"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -83,15 +83,17 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-xl text-gray-600 leading-relaxed font-sans">
-              I found my love of learning in a library as a child, the moment I realized the world
-              was bigger than I'd imagined. That feeling never left me, so I spent years as an
-              educator before moving into technical documentation.
+              I don't pretend that every technology I document is fascinating to me. I've documented
+              autonomous vehicles, retail data platforms, and enterprise telecommunications. The
+              subject matter changes, but what doesn't change is the standard I hold for the work
+              itself.
             </p>
             <p className="text-xl text-gray-600 leading-relaxed font-sans">
-              Both jobs are about the same thing: meeting someone where they are, and helping them
-              get to confident, without making them feel small along the way. That's what I bring
-              to every engagement, whether it's a Fortune 500 account or a Wallace Technology
-              Consulting client.
+              What I care about is the person on the other end of it: the engineer drowning in
+              undocumented systems, the new hire trying to get up to speed before their first big
+              deadline, the client trying to understand what they're paying for. That's the job I
+              show up for, the one where someone needed a person who could walk into real complexity
+              and build order out of it.
             </p>
           </motion.div>
 

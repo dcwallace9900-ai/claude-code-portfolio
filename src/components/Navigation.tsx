@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { NavItem } from '../types';
 import { scrollToSection, getActiveSection } from '../utils';
 
@@ -18,10 +19,12 @@ export default function Navigation() {
   const [activeSection, setActiveSection] = useState('home');
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
       const sections = document.querySelectorAll('section[id]');
       const currentSection = getActiveSection(sections);
       setActiveSection(currentSection);
@@ -32,17 +35,24 @@ export default function Navigation() {
   }, []);
 
   const handleNavClick = (sectionId: string) => {
-    scrollToSection(sectionId);
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => scrollToSection(sectionId), 100);
+    } else {
+      scrollToSection(sectionId);
+    }
     setIsOpen(false);
   };
+
+  const isHomePage = location.pathname === '/';
 
   return (
     <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-gray-100' 
+        isScrolled || !isHomePage
+          ? 'bg-white/95 backdrop-blur-md shadow-soft border-b border-gray-100'
           : 'bg-transparent'
       }`}
     >
@@ -74,18 +84,18 @@ export default function Navigation() {
                 transition={{ delay: 0.2 + index * 0.1 }}
                 onClick={() => handleNavClick(item.id)}
                 className={`relative px-3 lg:px-4 py-2 text-sm lg:text-base font-medium rounded-lg transition-all duration-200 ${
-                  activeSection === item.id
+                  isHomePage && activeSection === item.id
                     ? 'text-primary-600 bg-primary-50'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
                 aria-label={`Navigate to ${item.label}`}
               >
                 {item.label}
-                {activeSection === item.id && (
+                {isHomePage && activeSection === item.id && (
                   <motion.div
                     layoutId="activeTab"
                     className="absolute inset-0 bg-primary-100 rounded-lg -z-10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
                   />
                 )}
               </motion.button>
@@ -102,11 +112,7 @@ export default function Navigation() {
               aria-label="Toggle mobile menu"
               aria-expanded={isOpen}
             >
-              {isOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </motion.button>
           </div>
         </div>
@@ -130,7 +136,7 @@ export default function Navigation() {
                     transition={{ delay: index * 0.1 }}
                     onClick={() => handleNavClick(item.id)}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
-                      activeSection === item.id
+                      isHomePage && activeSection === item.id
                         ? 'text-primary-600 bg-primary-50'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                     }`}

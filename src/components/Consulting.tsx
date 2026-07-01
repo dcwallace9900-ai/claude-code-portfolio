@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Briefcase, Cpu, Sparkles, FileText, Calendar } from 'lucide-react';
 
 const services = [
@@ -81,19 +82,16 @@ export default function Consulting() {
         </div>
 
         {/* CTAs: Services PDF + Book a Consultation */}
-        {/* TODO: Replace href="#" on Book a Consultation with real Calendly link when available */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <a
-            href="https://canva.link/p2j75wknwlinxc6"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/services"
             className="btn-secondary inline-flex items-center"
           >
             View Services & Pricing
             <FileText className="ml-2 h-5 w-5" />
-          </a>
+          </Link>
           <a
-            href="#"
+            href="https://calendly.com/dcwallace9900/30min"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center"
