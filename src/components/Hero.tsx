@@ -7,7 +7,7 @@ const metrics = [
   { value: '20+', label: 'Concurrent Enterprise Workstreams' },
   { value: 'Tier-1', label: 'Enterprise Contracts Supported' },
   { value: '30%', label: 'Reduction in Migration Time' },
-  { value: 'Fortune 500', label: 'T-Mobile, AT&T, Verizon' },
+  { value: 'Fortune 500', label: 'Enterprise Telecommunications' },
 ];
 
 export default function Hero() {
