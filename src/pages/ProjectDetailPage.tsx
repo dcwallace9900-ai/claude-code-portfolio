@@ -15,8 +15,8 @@ const projectData = {
       'Stabilized Tier-1 telecommunications accounts through targeted readiness playbooks, and built the documentation infrastructure that supported a major demand planning platform initiative as it scaled from a mid-market to a large-scale enterprise engagement.',
     behindTheWork:
       'A large-scale platform initiative required replacing a fragmented, multi-source data environment with a centralized architecture. I built the client-facing pitch decks, current-state and future-state requirements, and process documentation that scoped the work and justified contract value, then served as subject matter expert in live pitch sessions to close the engagement.',
-    tags: ['Customer Readiness Frameworks', 'Enterprise Enablement', 'AI Documentation', 'COO-Level Reporting'],
-    linkedinUrl: 'https://www.linkedin.com/in/dc-wallace/details/experience/',
+    artifactsIntro:
+      'The following artifacts were produced as part of this engagement. All work samples have been sanitized to protect client confidentiality.',
     artifacts: [
       {
         id: 'product-brief',
@@ -58,7 +58,21 @@ const projectData = {
     behindTheWork:
       'Led cross-functional vendor evaluation and selection for enterprise knowledge base tooling, balancing budget constraints against engineering team needs. Mentored junior writers and defined documentation standards to keep quality consistent across quarterly release cycles.',
     tags: ['API & SDK Documentation', 'Developer Portals', 'ADA/WCAG Accessibility', 'Enterprise Tooling'],
-    linkedinUrl: null,
+    artifactsIntro: 'Representative work samples from this engagement.',
+    artifacts: [
+      {
+        id: 'campaign-reporting',
+        title: 'View Campaign Performance: How-To Guide',
+        description: 'A step-by-step guide to accessing, reading, filtering, and exporting campaign performance reports across the ad platform.',
+        path: '/projects/84-51/campaign-reporting',
+      },
+      {
+        id: 'release-notes',
+        title: "Release Notes: What's New",
+        description: 'A product release notes page announcing new advertising features, improvements, and interface changes.',
+        path: '/projects/84-51/release-notes',
+      },
+    ],
   },
   blackbaud: {
     company: 'Blackbaud — Nonprofit Software as a Service (SaaS)',
@@ -74,7 +88,27 @@ const projectData = {
     behindTheWork:
       'The migration moved customers off a desktop-based system with known security vulnerabilities and onto the cloud. Built blog posts, how-to guides, and adoption content to drive customer uptake, and partnered with engineering to develop Python scripting that replaced manual, individual customer migrations with a faster, team-based process, the mechanism behind the 30% time reduction.',
     tags: ['Docs-as-Code', 'Cloud Migration', 'Developer Portal', 'Customer Education'],
-    linkedinUrl: null,
+    artifactsIntro: "Published developer documentation. Opens on Blackbaud's developer site.",
+    externalArtifacts: [
+      {
+        id: 'sky-api-create-constituent',
+        title: 'SKY API — Create a Constituent',
+        description: 'API reference for creating a constituent record through the Blackbaud SKY API.',
+        url: 'https://developer.sky.blackbaud.com/api#api=crm-conmg&operation=CreateConstituent',
+      },
+      {
+        id: 'sky-api-create-campaign',
+        title: 'SKY API — Create a Campaign',
+        description: 'API reference for creating a campaign through the SKY API data integration service.',
+        url: 'https://developer.sky.blackbaud.com/api#api=nxt-data-integration&operation=CreateCampaign',
+      },
+      {
+        id: 'sky-api-getting-started',
+        title: 'SKY API — Getting Started guide',
+        description: 'Developer guide covering authentication and making a first call to the SKY API.',
+        url: 'https://developer.blackbaud.com/skyapi/docs/getting-started',
+      },
+    ],
   },
 };
 
@@ -141,42 +175,17 @@ export default function ProjectDetailPage({ projectId }: { projectId: string }) 
           <p className="text-gray-700 leading-relaxed text-lg font-sans">{project.behindTheWork}</p>
         </div>
 
-        <div className="flex flex-wrap gap-2 mb-10">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="px-3 py-1 bg-accent-50 text-accent-700 text-sm font-medium rounded-full border border-accent-100 font-sans"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-
-        {'artifacts' in project && project.artifacts && project.artifacts.length > 0 ? (
-          <button
-            onClick={() => {
-              const el = document.getElementById('work-samples');
-              el?.scrollIntoView({ behavior: 'smooth' });
-            }}
-            className="inline-flex items-center px-6 py-3 bg-primary-800 text-white font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200 animate-breathe"
-          >
-            Explore Work Samples
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </button>
-        ) : project.linkedinUrl ? (
-          <a
-            href={project.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-primary-800 text-white font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200"
-          >
-            View on LinkedIn
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </a>
-        ) : (
-          <span className="inline-flex items-center px-6 py-3 text-gray-400 font-medium opacity-60 cursor-not-allowed">
-            Work Sample — Coming Soon
-          </span>
+        {'tags' in project && project.tags && (
+          <div className="flex flex-wrap gap-2 mb-10">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 bg-accent-50 text-accent-700 text-sm font-medium rounded-full border border-accent-100 font-sans"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         )}
 
         {'artifacts' in project && project.artifacts && project.artifacts.length > 0 && (
@@ -185,17 +194,13 @@ export default function ProjectDetailPage({ projectId }: { projectId: string }) 
               Work Samples
             </h2>
             <div className="w-16 h-0.5 bg-gold-500 mb-6"></div>
-            <p className="text-gray-600 mb-6 font-sans">
-              The following artifacts were produced as part of this engagement.
-              All work samples have been sanitized to protect client
-              confidentiality.
-            </p>
+            <p className="text-gray-600 mb-6 font-sans">{project.artifactsIntro}</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {project.artifacts.map((artifact) => (
                 <Link
                   key={artifact.id}
                   to={artifact.path}
-                  className="block p-5 bg-gray-50 rounded-xl border border-gray-200 hover:border-accent-300 hover:shadow-soft transition-all duration-200 group"
+                  className="block p-5 bg-gray-50 rounded-xl border border-gray-200 hover:border-accent-300 hover:shadow-soft hover:-translate-y-1 transition-all duration-200 group cursor-pointer"
                 >
                   <h3 className="font-heading font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors duration-200">
                     {artifact.title}
@@ -208,6 +213,38 @@ export default function ProjectDetailPage({ projectId }: { projectId: string }) 
                     <ArrowRight className="ml-1 h-3.5 w-3.5" />
                   </span>
                 </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {'externalArtifacts' in project && project.externalArtifacts && project.externalArtifacts.length > 0 && (
+          <div id="work-samples" className="mt-12">
+            <h2 className="font-heading font-bold text-2xl text-primary-900 mb-2">
+              Work Samples
+            </h2>
+            <div className="w-16 h-0.5 bg-gold-500 mb-6"></div>
+            <p className="text-gray-600 mb-6 font-sans">{project.artifactsIntro}</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {project.externalArtifacts.map((artifact) => (
+                <a
+                  key={artifact.id}
+                  href={artifact.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-5 bg-gray-50 rounded-xl border border-gray-200 hover:border-accent-300 hover:shadow-soft hover:-translate-y-1 transition-all duration-200 group cursor-pointer"
+                >
+                  <h3 className="font-heading font-semibold text-primary-900 mb-2 group-hover:text-accent-600 transition-colors duration-200">
+                    {artifact.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed font-sans">
+                    {artifact.description}
+                  </p>
+                  <span className="inline-flex items-center mt-3 text-accent-600 text-sm font-medium">
+                    View artifact
+                    <ExternalLink className="ml-1 h-3.5 w-3.5" />
+                  </span>
+                </a>
               ))}
             </div>
           </div>

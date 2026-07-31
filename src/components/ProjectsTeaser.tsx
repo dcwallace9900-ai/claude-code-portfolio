@@ -11,15 +11,8 @@ const caseStudies = [
     icon: Building2,
     company: 'Apkudo — Device Intelligence',
     title: 'Head of Customer Education & Readiness',
-    challenge:
-      'Establishing enterprise readiness infrastructure from the ground up to stabilize Tier-1 accounts and scale revenue-driving engagements across major telcos.',
-    system:
-      'Governs 20+ concurrent workstreams, integrates AI into technical enablement workflows, and enforces ISO/ISMS security standards, reporting directly to the COO to align with executive business priorities.',
-    impact:
-      'Stabilized Tier-1 telecommunications accounts through targeted readiness playbooks, and built the documentation infrastructure that supported a major platform initiative as it scaled from a mid-market to a large-scale enterprise engagement.',
     metric: '20+',
     metricLabel: 'Concurrent Workstreams',
-    tags: ['Customer Readiness Frameworks', 'Enterprise Enablement', 'AI Documentation', 'COO-Level Reporting'],
     linkedinUrl: 'https://www.linkedin.com/in/dc-wallace/details/experience/',
   },
   {
@@ -29,15 +22,8 @@ const caseStudies = [
     icon: TrendingUp,
     company: '84.51° / Kroger — Retail Data Science',
     title: 'Developer Experience (DX) Lead & Senior Technical Writer',
-    challenge:
-      'Enhancing the external developer experience and standardizing the knowledge base ecosystem across the Kroger Ad Platform.',
-    system:
-      'Led the technical enablement strategy for APIs, SDKs, and Developer Portals and spearheaded the cross-functional enterprise tooling evaluation process.',
-    impact:
-      'Improved developer usability by 25% and drove ADA and WCAG accessibility initiatives that raised content accessibility and usability scores by 40%.',
     metric: '+25%',
     metricLabel: 'Developer Usability',
-    tags: ['API & SDK Documentation', 'Developer Portals', 'ADA/WCAG Accessibility', 'Enterprise Tooling'],
     linkedinUrl: null,
   },
   {
@@ -47,15 +33,8 @@ const caseStudies = [
     icon: Zap,
     company: 'Blackbaud — Nonprofit SaaS',
     title: 'Cloud Migration Strategist & Technical Writer',
-    challenge:
-      'Architecting enterprise readiness playbooks to guide the customer base and external developers through a large-scale platform transition across the SKY API ecosystem.',
-    system:
-      'Drove revenue enablement by migrating the developer portal to a docs-as-code workflow. Established cross-functional contribution guidelines for engineering teams and built self-serve learning pathways for the API ecosystem.',
-    impact:
-      'Led the customer-facing education initiative that successfully reduced customer transition time by 30% and unified the user journey.',
     metric: '30%',
     metricLabel: 'Reduction in Migration Time',
-    tags: ['Docs-as-Code', 'Cloud Migration', 'Developer Portal', 'Customer Education'],
     linkedinUrl: null,
   },
 ];
@@ -95,21 +74,23 @@ export default function ProjectsTeaser() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="flex justify-center border-b border-gray-200 mb-2"
+          className="flex justify-center mb-2"
         >
-          {caseStudies.map((s) => (
-            <button
-              key={s.id}
-              onClick={() => selectTab(s.id)}
-              className={`px-6 py-3 text-sm font-medium border-b-2 transition-all duration-200 font-sans -mb-px ${
-                selectedId === s.id
-                  ? 'border-accent-600 text-primary-900 animate-tab-breathe'
-                  : 'border-transparent text-gray-400 hover:text-gray-600 hover:border-gray-300'
-              }`}
-            >
-              {s.tabLabel}
-            </button>
-          ))}
+          <div className="inline-flex items-center gap-1 bg-primary-50 rounded-2xl p-2">
+            {caseStudies.map((s) => (
+              <button
+                key={s.id}
+                onClick={() => selectTab(s.id)}
+                className={`px-6 py-3 sm:px-8 sm:py-3.5 text-sm sm:text-base font-sans rounded-xl transition-all duration-200 cursor-pointer ${
+                  selectedId === s.id
+                    ? 'bg-white text-primary-900 font-bold shadow-soft border border-gold-300'
+                    : 'text-primary-900/60 font-medium hover:text-primary-900'
+                }`}
+              >
+                {s.tabLabel}
+              </button>
+            ))}
+          </div>
         </motion.div>
 
         {/* Tab preview line */}
@@ -146,68 +127,17 @@ export default function ProjectsTeaser() {
                   <p className="text-primary-600 text-sm font-semibold font-sans uppercase tracking-widest mb-2">
                     {study.company}
                   </p>
-                  <h3 className="font-heading font-bold text-2xl text-gray-900 mb-3">
+                  <h3 className="font-heading font-bold text-2xl text-gray-900 mb-6">
                     {study.title}
                   </h3>
 
-                  {/* View the Project button */}
-                  {study.id === 'apkudo' ? (
-                    <Link
-                      to="/projects/apkudo#work-samples"
-                      className="inline-flex items-center px-4 py-2 bg-primary-800 text-white text-sm font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200 mb-6 animate-breathe"
-                    >
-                      View the Project
-                      <ArrowRight className="ml-1.5 h-4 w-4" />
-                    </Link>
-                  ) : (
-                    <span className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-400 text-sm font-medium rounded-lg cursor-not-allowed mb-6">
-                      Coming Soon
-                    </span>
-                  )}
-
-                  <div className="grid sm:grid-cols-3 gap-6 mb-6">
-                    <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 font-sans">
-                        The Challenge
-                      </p>
-                      <p className="text-gray-600 text-sm leading-relaxed font-sans">{study.challenge}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-2 font-sans">
-                        The System
-                      </p>
-                      <p className="text-gray-600 text-sm leading-relaxed font-sans">{study.system}</p>
-                    </div>
-                    <div>
-                      <p className="text-xs font-semibold text-primary-600 uppercase tracking-widest mb-2 font-sans">
-                        The Impact
-                      </p>
-                      <p className="text-gray-700 text-sm leading-relaxed font-medium font-sans">{study.impact}</p>
-                    </div>
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-5">
-                    {study.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 bg-primary-50 text-primary-700 text-xs font-medium rounded-full border border-primary-100 font-sans"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* Case study link — only for tabs without work samples */}
-                  {study.id !== 'apkudo' && (
-                    <Link
-                      to={`/projects/${study.detailPath}`}
-                      className="inline-flex items-center mt-1 text-accent-600 font-medium text-sm hover:text-accent-700 transition-colors duration-200 font-sans"
-                    >
-                      Read the Full Case Study
-                      <ArrowRight className="ml-1.5 h-4 w-4" />
-                    </Link>
-                  )}
+                  <Link
+                    to={`/projects/${study.detailPath}`}
+                    className="inline-flex items-center px-4 py-2 bg-primary-800 text-white text-sm font-medium rounded-lg hover:bg-primary-900 transition-colors duration-200 animate-breathe"
+                  >
+                    View the Project
+                    <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Link>
                 </div>
               </div>
             </div>

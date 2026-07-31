@@ -15,6 +15,9 @@ import ApkudoProductBrief from './pages/apkudo/ApkudoProductBrief';
 import ApkudoCurrentState from './pages/apkudo/ApkudoCurrentState';
 import ApkudoFutureState from './pages/apkudo/ApkudoFutureState';
 import ApkudoDiscovery from './pages/apkudo/ApkudoDiscovery';
+import NotificationsApiReference from './pages/samples/NotificationsApiReference';
+import CampaignReportingHowTo from './pages/samples/CampaignReportingHowTo';
+import ReleaseNotes from './pages/samples/ReleaseNotes';
 
 function HomePage() {
   return (
@@ -62,11 +65,14 @@ function App() {
             <Route path="/projects/apkudo/future-state" element={<ApkudoFutureState />} />
             <Route path="/projects/apkudo/discovery-questionnaire" element={<ApkudoDiscovery />} />
             <Route path="/projects/84-51" element={<ProjectDetailPage projectId="84-51" />} />
+            <Route path="/projects/84-51/campaign-reporting" element={<CampaignReportingHowTo />} />
+            <Route path="/projects/84-51/release-notes" element={<ReleaseNotes />} />
             <Route path="/projects/blackbaud" element={<ProjectDetailPage projectId="blackbaud" />} />
+            <Route path="/work-samples/notifications-api" element={<NotificationsApiReference />} />
           </Routes>
         </main>
 
-        <footer className="bg-gray-900 text-white py-8" role="contentinfo" aria-label="Site footer">
+        <footer className="bg-primary-900 text-white py-8" role="contentinfo" aria-label="Site footer">
           <div className="container">
             <div className="text-center">
               <p className="text-gray-400">
