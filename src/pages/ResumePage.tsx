@@ -28,7 +28,7 @@ export default function ResumePage() {
             <div>
               <h1 className="font-heading font-bold text-4xl text-primary-900 mb-1">Diana Wallace</h1>
               <p className="text-accent-600 font-semibold font-sans">
-                Technical Program Lead | Enterprise Readiness & Cross-Functional Delivery | SAFe 5
+                Technical Documentation Manager | Developer Experience, Docs-as-Code & API Documentation | Enterprise Program Leadership
               </p>
             </div>
             <a
@@ -51,9 +51,9 @@ export default function ResumePage() {
         <div className="mb-10">
           <SectionHeader>Professional Summary</SectionHeader>
           <p className="text-gray-700 leading-relaxed font-sans">
-            Senior technical program and documentation leader with 8+ years of experience directing
-            cross-functional delivery across Development, QA, and client-facing teams for Fortune 500
-            telecommunications and SaaS accounts. Operates as a matrix leader, coordinating engineering,
+            Senior technical documentation and developer experience leader with 8+ years directing API
+            and developer documentation, docs-as-code workflows, and cross-functional delivery for
+            Fortune 500 telecommunications and SaaS accounts. Operates as a matrix leader, coordinating engineering,
             testing, and documentation workstreams, to stabilize Tier-1 enterprise relationships and
             accelerate contract delivery. Combines a formal background in learning science with deep
             technical fluency to translate complex engineering work into enterprise-ready outcomes.

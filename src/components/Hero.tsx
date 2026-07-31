@@ -57,7 +57,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-accent-600 mb-4 leading-relaxed"
             >
-              Technical Program Lead, Enterprise Readiness & Cross-Functional Delivery, SAFe 5
+              Technical Documentation Manager, API & Developer Documentation, Docs-as-Code, SAFe 5
             </motion.p>
 
             {/* Supporting sentence — smaller, sans-serif */}
@@ -123,7 +123,7 @@ export default function Hero() {
               <div className="relative w-72 h-72 lg:w-88 lg:h-88 rounded-full bg-gray-100 shadow-large overflow-hidden border-2 border-gold-300 animate-photo-glow">
                 <img
                   src="/profile.png"
-                  alt="Diana Wallace — Technical Program Lead, Enterprise Readiness"
+                  alt="Diana Wallace — Technical Documentation Manager"
                   className="w-full h-full object-cover bg-[radial-gradient(circle,_#FBF8F2_0%,_#F3EEE3_100%)]"
                   style={{ objectPosition: 'center 20%' }}
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
