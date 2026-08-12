@@ -10,6 +10,7 @@ const navItems: NavItem[] = [
   { id: 'about', label: 'About', href: '#about' },
   { id: 'background', label: 'Background', href: '#background' },
   { id: 'projects', label: 'Projects', href: '#projects' },
+  { id: 'blog', label: 'Blog', href: '#blog', path: '/blog' },
   { id: 'consulting', label: 'Services', href: '#consulting' },
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
@@ -34,7 +35,13 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleNavClick = (sectionId: string) => {
+  const handleNavClick = (item: NavItem) => {
+    if (item.path) {
+      navigate(item.path);
+      setIsOpen(false);
+      return;
+    }
+    const sectionId = item.id;
     if (location.pathname !== '/') {
       navigate('/');
       setTimeout(() => scrollToSection(sectionId), 100);
@@ -45,6 +52,9 @@ export default function Navigation() {
   };
 
   const isHomePage = location.pathname === '/';
+
+  const isActive = (item: NavItem) =>
+    item.path ? location.pathname.startsWith(item.path) : isHomePage && activeSection === item.id;
 
   return (
     <motion.header
@@ -66,7 +76,7 @@ export default function Navigation() {
             className="flex-shrink-0"
           >
             <button
-              onClick={() => handleNavClick('home')}
+              onClick={() => handleNavClick({ id: 'home', label: 'Home', href: '#home' })}
               className="text-xl lg:text-2xl font-heading font-bold text-gray-900 hover:text-primary-600 transition-colors duration-200"
               aria-label="Diana Wallace - Home"
             >
@@ -82,16 +92,16 @@ export default function Navigation() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + index * 0.1 }}
-                onClick={() => handleNavClick(item.id)}
+                onClick={() => handleNavClick(item)}
                 className={`relative px-3 lg:px-4 py-2 text-sm lg:text-base font-medium rounded-lg transition-all duration-200 ${
-                  isHomePage && activeSection === item.id
+                  isActive(item)
                     ? 'text-primary-600 bg-primary-50'
                     : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                 }`}
                 aria-label={`Navigate to ${item.label}`}
               >
                 {item.label}
-                {isHomePage && activeSection === item.id && (
+                {isActive(item) && (
                   <motion.div
                     layoutId="activeTab"
                     className="absolute inset-0 bg-primary-100 rounded-lg -z-10"
@@ -134,9 +144,9 @@ export default function Navigation() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    onClick={() => handleNavClick(item.id)}
+                    onClick={() => handleNavClick(item)}
                     className={`block w-full text-left px-3 py-2 rounded-lg text-base font-medium transition-colors duration-200 ${
-                      isHomePage && activeSection === item.id
+                      isActive(item)
                         ? 'text-primary-600 bg-primary-50'
                         : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                     }`}

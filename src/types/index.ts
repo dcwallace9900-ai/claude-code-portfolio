@@ -2,6 +2,7 @@ export interface NavItem {
   id: string;
   label: string;
   href: string;
+  path?: string;
 }
 
 export interface Skill {

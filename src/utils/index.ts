@@ -36,6 +36,15 @@ export function formatDate(date: Date): string {
   }).format(date);
 }
 
+export function formatBlogDate(isoDate: string): string {
+  const [year, month, day] = isoDate.split('-').map(Number);
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(new Date(year, month - 1, day));
+}
+
 export function getActiveSection(sections: NodeListOf<Element>): string {
   const scrollPosition = window.scrollY + 100;
   

@@ -18,6 +18,8 @@ import ApkudoDiscovery from './pages/apkudo/ApkudoDiscovery';
 import NotificationsApiReference from './pages/samples/NotificationsApiReference';
 import CampaignReportingHowTo from './pages/samples/CampaignReportingHowTo';
 import ReleaseNotes from './pages/samples/ReleaseNotes';
+import BlogIndexPage from './pages/BlogIndexPage';
+import BlogPostPage from './pages/BlogPostPage';
 
 function HomePage() {
   return (
@@ -69,6 +71,8 @@ function App() {
             <Route path="/projects/84-51/release-notes" element={<ReleaseNotes />} />
             <Route path="/projects/blackbaud" element={<ProjectDetailPage projectId="blackbaud" />} />
             <Route path="/work-samples/notifications-api" element={<NotificationsApiReference />} />
+            <Route path="/blog" element={<BlogIndexPage />} />
+            <Route path="/blog/:slug" element={<BlogPostPage />} />
           </Routes>
         </main>
 
