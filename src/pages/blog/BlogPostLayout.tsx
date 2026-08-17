@@ -1,15 +1,17 @@
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { formatBlogDate } from '../../utils';
+import BlogCardHeader from './BlogCardHeader';
 
 interface BlogPostLayoutProps {
   title: string;
   date: string;
   tags?: string[];
+  motif?: string;
   children: React.ReactNode;
 }
 
-export default function BlogPostLayout({ title, date, tags, children }: BlogPostLayoutProps) {
+export default function BlogPostLayout({ title, date, tags, motif, children }: BlogPostLayoutProps) {
   return (
     <section className="section-padding bg-white min-h-screen">
       <div className="container max-w-3xl">
@@ -20,6 +22,8 @@ export default function BlogPostLayout({ title, date, tags, children }: BlogPost
           <ArrowLeft className="mr-1.5 h-4 w-4" />
           Back to Blog
         </Link>
+
+        {motif && <BlogCardHeader motif={motif} variant="hero" className="mb-8" />}
 
         <div className="mb-2">
           <span className="text-accent-600 text-xs font-semibold uppercase tracking-widest font-sans">

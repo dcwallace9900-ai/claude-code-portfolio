@@ -167,7 +167,7 @@ export default function DocsAsCodeForWriters() {
   );
 
   return (
-    <BlogPostLayout title={post.title} date={post.date} tags={post.tags}>
+    <BlogPostLayout title={post.title} date={post.date} tags={post.tags} motif={post.motif}>
       <p className="text-lg text-gray-600 leading-relaxed font-sans mb-10">
         Your team wants to move docs into Git. The tooling looks like it was built for developers,
         because it was. Here's what all of it actually means, in plain writer terms, and why it
