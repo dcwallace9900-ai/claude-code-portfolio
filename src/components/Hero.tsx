@@ -57,7 +57,7 @@ export default function Hero() {
               transition={{ delay: 0.3, duration: 0.7 }}
               className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-accent-600 mb-4 leading-relaxed"
             >
-              Technical Documentation Manager, API & Developer Documentation, Docs-as-Code, SAFe 5
+              Technical Documentation Manager, API & Developer Documentation, Docs-as-Code, AI-Enhanced Workflows
             </motion.p>
 
             {/* Supporting sentence — smaller, sans-serif */}
