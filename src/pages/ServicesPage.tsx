@@ -85,17 +85,17 @@ export default function ServicesPage() {
           <p className="text-gray-500 text-sm font-sans">diana-wallace.com · Atlanta Metropolitan Area</p>
           <div className="w-24 h-1 bg-gold-500 mt-6 mb-6"></div>
           <p className="text-gray-700 leading-relaxed font-sans">
-            Independent advisory for teams that need enterprise-grade readiness, technical
-            documentation, and digital presence built right, without the overhead of a full-time hire.
-            Every engagement starts with a scoping conversation, so the work below reflects typical
-            structure and starting ranges rather than fixed pricing.
+            Independent advisory for teams that need enterprise-grade technical documentation,
+            developer experience, and AI-enhanced content workflows built right, without the
+            overhead of a full-time hire. Every engagement starts with a scoping conversation, so
+            the work below reflects typical structure and starting ranges rather than fixed pricing.
           </p>
         </div>
 
         {/* Services */}
         <ServiceCard
           title="Enterprise Readiness & Documentation Architecture"
-          subtitle="For teams that need to scope, justify, and document complex technical deployments — the same kind of work that has supported Fortune 500 telecommunications and SaaS contract engagements."
+          subtitle="For teams that need to scope, document, and justify complex technical deployments, the same enterprise documentation and readiness work that has supported Fortune 500 telecommunications and SaaS engagements."
           fullEngagementItems={[
             'Current-state and future-state requirements documentation',
             'Client-facing pitch decks and process documentation',
@@ -115,6 +115,7 @@ export default function ServicesPage() {
           subtitle="For teams that want to use AI tools well, not just adopt them. Built on hands-on experience integrating Claude, Gemini, and NotebookLM into real documentation and content pipelines."
           fullEngagementItems={[
             'End-to-end workflow design integrating AI tools into an existing documentation or content pipeline',
+            'Docs-as-code pipeline setup with AI-assisted drafting and human-in-the-loop review',
             'Team training and onboarding to the new workflow',
           ]}
           price="$2,500–$6,000, or $150–$200/hour for scoped advisory work"
@@ -122,22 +123,6 @@ export default function ServicesPage() {
             { item: 'AI tool evaluation and recommendation for a specific use case', range: '$1,000–$1,800' },
             { item: 'One-time workflow setup and training session', range: '$750–$1,500' },
             { item: 'Prompt templates for a specific repeatable task', range: '$500–$1,200' },
-          ]}
-        />
-
-        <ServiceCard
-          title="Brand & Digital Presence Build"
-          subtitle="Visual identity, copywriting, and site builds for founders and consultants who need to look as credible as the work they do."
-          fullEngagementItems={[
-            'Color palette, typography, and visual identity system',
-            'Copywriting and messaging calibration across site, resume, and LinkedIn',
-            'Single-page or multi-section site build',
-          ]}
-          price="$2,500–$5,000, scaled to scope"
-          alacarte={[
-            { item: 'Visual rebrand only (palette and typography, no new copy)', range: '$1,200–$2,000' },
-            { item: 'Copywriting and messaging only (no visual work)', range: '$1,000–$2,200' },
-            { item: 'Single-page site build', range: '$1,500–$2,800' },
           ]}
         />
 
