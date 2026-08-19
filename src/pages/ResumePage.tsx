@@ -53,7 +53,9 @@ export default function ResumePage() {
           <p className="text-gray-700 leading-relaxed font-sans">
             Senior technical documentation and developer experience leader with 8+ years directing API
             and developer documentation, docs-as-code workflows, and cross-functional delivery for
-            Fortune 500 telecommunications and SaaS accounts. Operates as a matrix leader, coordinating engineering,
+            Fortune 500 telecommunications and SaaS accounts. Builds AI-assisted documentation
+            workflows that speed drafting and hold consistency at scale, always with human review
+            for accuracy, while working docs-as-code end to end. Operates as a matrix leader, coordinating engineering,
             testing, and documentation workstreams, to stabilize Tier-1 enterprise relationships and
             accelerate contract delivery. Combines a formal background in learning science with deep
             technical fluency to translate complex engineering work into enterprise-ready outcomes.
@@ -66,9 +68,9 @@ export default function ResumePage() {
           <div className="grid sm:grid-cols-2 gap-4">
             {[
               { label: 'Program Leadership', items: 'Cross-Functional Delivery, Matrix Leadership, Client Liaison, Stakeholder Alignment' },
-              { label: 'Enterprise Governance', items: 'Readiness Frameworks, Headcount Planning, Performance Rubrics, ISO/ISMS Compliance' },
-              { label: 'Technical Enablement', items: 'API/Developer Experience (DX), Docs-as-Code, AI-Enhanced Workflows, ADA/WCAG Standards' },
-              { label: 'Adoption Strategy', items: 'Adult Learning Theory, Cognitive Load Management, Onboarding Curriculum Design' },
+              { label: 'Technical Enablement', items: 'API & Developer Documentation, Docs-as-Code, Developer Experience (DX), ADA/WCAG Standards' },
+              { label: 'AI-Enhanced Documentation', items: 'AI-Assisted Docs Workflows, Prompt Engineering, Claude Code & Docs-as-Code Automation, Human-in-the-Loop Quality Review' },
+              { label: 'Content Systems & Analytics', items: 'Documentation Governance, Information Architecture, Enterprise Web & SEO, GA4 Analytics' },
             ].map(({ label, items }) => (
               <div key={label}>
                 <p className="text-sm font-semibold text-primary-800 font-sans mb-0.5">{label}</p>
@@ -99,7 +101,7 @@ export default function ResumePage() {
                   'Directs Cross-Functional Delivery: Cleared historical delivery backlogs and aligned client expectations with Development, QA, and Documentation teams, relying on matrix leadership rather than formal management authority, to establish Customer Readiness Frameworks for Tier-1 accounts.',
                   "Drives Revenue-Enabling Documentation & Client Engagement: Built client-facing pitch decks, current-state and future-state requirements, and process documentation for a Tier-1 telecommunications client's inventory optimization platform initiative, scoping the work and justifying contract value, then served as subject matter expert in live pitch sessions to close the engagement.",
                   'Governs Enterprise Workstreams: Manages a portfolio of 20+ concurrent enterprise workstreams, reporting directly to the COO to align program strategy with executive business priorities.',
-                  'Integrates AI Into Delivery: Deploys Gemini AI across documentation and program workflows to accelerate delivery timelines across all active workstreams.',
+                  'Builds AI-Enhanced Documentation Workflows: Designs and deploys AI-assisted documentation and program workflows, with human-in-the-loop review for accuracy, to accelerate delivery across all active workstreams while holding quality and consistency at scale.',
                   'Enforces Security & Compliance: Maintains ISO and ISMS security standards across device intelligence initiatives for Tier-1 telecommunications partners.',
                   "Builds Organizational Infrastructure: Develops headcount justification, organizational roadmap, and performance rubrics to support Apkudo's ability to scale its Fortune 500 client base.",
                 ].map((item, i) => (
