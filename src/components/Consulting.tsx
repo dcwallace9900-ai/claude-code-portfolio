@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Briefcase, Cpu, Sparkles, FileText, Calendar } from 'lucide-react';
+import { Briefcase, Cpu, FileText, Calendar } from 'lucide-react';
 
 const services = [
   {
@@ -20,12 +20,12 @@ const services = [
       "Workflow design and team training that turns AI tools into a real part of how your team works, not just another app nobody opens.",
   },
   {
-    id: 'brand-digital-presence',
-    icon: Sparkles,
-    hook: "You've outgrown your current site. It's time you looked like it.",
-    title: 'Brand & Digital Presence Build',
+    id: 'fractional-advisory',
+    icon: Calendar,
+    hook: "You need senior documentation expertise, but not a full-time hire.",
+    title: 'Fractional Technical Enablement Advisory',
     description:
-      'Visual identity, copywriting, and a site that makes the first impression match the actual caliber of the work.',
+      'Ongoing, retainer-based support for teams that need senior-level documentation, developer experience, and readiness expertise on a recurring basis.',
   },
 ];
 
