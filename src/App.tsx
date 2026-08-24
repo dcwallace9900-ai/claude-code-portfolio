@@ -6,10 +6,8 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Background from './components/Background';
 import ProjectsTeaser from './components/ProjectsTeaser';
-import Consulting from './components/Consulting';
 import Contact from './components/Contact';
 import ResumePage from './pages/ResumePage';
-import ServicesPage from './pages/ServicesPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import ApkudoProductBrief from './pages/apkudo/ApkudoProductBrief';
 import ApkudoCurrentState from './pages/apkudo/ApkudoCurrentState';
@@ -28,7 +26,6 @@ function HomePage() {
       <About />
       <Background />
       <ProjectsTeaser />
-      <Consulting />
       <Contact />
     </>
   );
@@ -60,7 +57,6 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/resume" element={<ResumePage />} />
-            <Route path="/services" element={<ServicesPage />} />
             <Route path="/projects/apkudo" element={<ProjectDetailPage projectId="apkudo" />} />
             <Route path="/projects/apkudo/product-brief" element={<ApkudoProductBrief />} />
             <Route path="/projects/apkudo/current-state" element={<ApkudoCurrentState />} />
