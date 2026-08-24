@@ -17,6 +17,15 @@ export const blogPosts: BlogPost[] = [
     tags: ['Technical Writing', 'Docs-as-Code', 'Developer Experience'],
     motif: 'branch-merge',
   },
+  {
+    slug: 'ai-prompts-for-technical-writers',
+    title: 'AI Prompts for Technical Writers',
+    date: '2026-08-24',
+    excerpt:
+      "A vague prompt gets you generic mush. A good one gets you a real draft. Here's how to write prompts that actually help with documentation work.",
+    tags: ['Technical Writing', 'AI for Docs', 'Prompt Engineering'],
+    motif: 'ai-prompt',
+  },
 ];
 
 export function getSortedBlogPosts(): BlogPost[] {
